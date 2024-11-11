@@ -9,6 +9,6 @@ def kalkulacka():
     elif operace == "*":
         return a * b
     elif operace == "/":
-        return a / b
+        return a // b
 
 print(kalkulacka())
