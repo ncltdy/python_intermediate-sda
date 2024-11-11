@@ -1,6 +1,8 @@
 def kalkulacka():
     try:
-        a = int(input("zadejte prvni cislo: "))
+        a = int(input("zadejte prvni cislo, nebo ukoncete program slovem 'konec': "))
+        if a == "konec":
+            quit()
     except ValueError:
         print("spatne zadana hodnota, ukoncuji program")
         quit()
@@ -35,5 +37,7 @@ while True:
     if pokracovat == "y":
         print(kalkulacka())
     elif pokracovat == "n":
-        quit()
+        break
 
+
+# infinite kalkulacka - zadefinovat operace prvne?
