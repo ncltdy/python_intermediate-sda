@@ -25,7 +25,7 @@ def kalkulacka():
         except ZeroDivisionError:
             print("nelze delit nulou")
     else:
-        print("spatne zadany operator, ukonuji program")
+        print("spatne zadany operator, ukoncuji program")
         quit()
 
 print(kalkulacka())
