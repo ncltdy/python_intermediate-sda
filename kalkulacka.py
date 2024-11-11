@@ -29,3 +29,11 @@ def kalkulacka():
 
 
 print(kalkulacka())
+
+while True:
+    pokracovat = input("prejete si pokracovat ve vypoctech? (y/n): ")
+    if pokracovat == "y":
+        print(kalkulacka())
+    elif pokracovat == "n":
+        quit()
+
