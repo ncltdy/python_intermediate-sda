@@ -9,6 +9,9 @@ def kalkulacka():
     elif operace == "*":
         return a * b
     elif operace == "/":
-        return a // b
+        try:
+            return a // b
+        except ZeroDivisionError:
+            print("nelze delit nulou")
 
 print(kalkulacka())
