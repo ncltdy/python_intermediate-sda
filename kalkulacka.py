@@ -1,7 +1,18 @@
 def kalkulacka():
-    a = int(input("zadejte prvni cislo: "))
+    try:
+        a = int(input("zadejte prvni cislo: "))
+    except ValueError:
+        print("spatne zadana hodnota, ukoncuji program")
+        quit()
+
     operace = input("zadejte znamenko: ")
-    b = int(input("zadejte druhe cislo: "))
+
+    try:
+        b = int(input("zadejte druhe cislo: "))
+    except ValueError:
+        print("spatne zadana hodnota, ukoncuji program")
+        quit()
+
     if operace == "+":
         return a + b
     elif operace == "-":
@@ -13,5 +24,8 @@ def kalkulacka():
             return a // b
         except ZeroDivisionError:
             print("nelze delit nulou")
+    else:
+        print("spatne zadany operator, ukonuji program")
+        quit()
 
 print(kalkulacka())
