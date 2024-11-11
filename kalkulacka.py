@@ -7,7 +7,7 @@ def kalkulacka():
 
     operace = input("zadejte znamenko: ")
     if operace not in ["+", "-", "*", "/"]:
-        raise ValueError
+        raise ValueError("spatne zadane znamenko, ukoncuji program")
 
     try:
         b = int(input("zadejte druhe cislo: "))
