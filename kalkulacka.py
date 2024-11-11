@@ -6,6 +6,8 @@ def kalkulacka():
         quit()
 
     operace = input("zadejte znamenko: ")
+    if operace not in ["+", "-", "*", "/"]:
+        raise ValueError
 
     try:
         b = int(input("zadejte druhe cislo: "))
@@ -24,8 +26,6 @@ def kalkulacka():
             return a // b
         except ZeroDivisionError:
             print("nelze delit nulou")
-    else:
-        print("spatne zadane znamenko, ukoncuji program")
-        quit()
+
 
 print(kalkulacka())
