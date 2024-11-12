@@ -1,8 +1,6 @@
 def kalkulacka():
     try:
-        a = int(input("zadejte prvni cislo, nebo ukoncete program slovem 'konec': "))
-        if a == "konec":
-            quit()
+        a = int(input("zadejte prvni cislo: "))
     except ValueError:
         print("spatne zadana hodnota, ukoncuji program")
         quit()
@@ -41,3 +39,4 @@ while True:
 
 
 # infinite kalkulacka - zadefinovat operace prvne?
+
