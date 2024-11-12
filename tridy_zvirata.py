@@ -1,7 +1,15 @@
 class Animal:
+    total_weight = 0
+
     def __init__(self, weight, age):
         self.weight = weight
         self.age = age
+        Animal.total_weight += weight
+
+    @classmethod
+    def add_animal(cls):
+        return cls.total_weight
+
 
     def look(self):
         print("the animal looks over yonder")
@@ -46,13 +54,12 @@ class DomesticFish(Mammal, Fish):
 # kdyz trida dedi z dvou trid a sdili stejnou metodu, zavola se ta ktera je specifikovana jako prvni (mammal)
 
 
-animal1 = Animal(3, 12)
-print(animal1.look())
+animal1 = Animal(30, 1)
+animal2 = Animal(40, 2)
+animal3 = Animal(50, 3)
 
-dog1 = DomesticDog(5, 3, "maltese", "white")
-print(dog1)
-print(dog1.bark())
+print(Animal.total_weight)
 
-fish1 = DomesticFish(1, 1)
-print(fish1.run())
-
+animals = [animal1, animal2, animal3]
+for animal in animals:
+    print(animal.weight)
