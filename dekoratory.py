@@ -15,3 +15,17 @@ def rozdil(a,b):
 
 print(soucet(3,5))
 print(rozdil(3,5))
+
+
+def with_password(func):
+    def pass_protected(*args, **kwargs):
+        password = "1234"
+        if input("zadejte heslo: ") == password:
+            return f"vysledek funkce \"{func.__name__}\" je: {func}"
+        else:
+            return "spatne heslo"
+    return pass_protected
+
+@with_password
+def soucetAB(a,b):
+    return a + b
