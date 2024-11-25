@@ -68,4 +68,5 @@ def zacit_zapis():
             print("spatne zadana operace")
 
 
+
 zacit_zapis()
