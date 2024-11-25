@@ -14,8 +14,7 @@ def vypsat(notes):
 def smazat(notes):
     print(notes)
     radek_ke_smazani = int(input("zadejte poradi radku ktery se ma smazat: ")) - 1
-    radky = notes.splitlines()
-    radky.pop(radek_ke_smazani)
+    del notes[radek_ke_smazani]
 
 
 def upravit(notes):
@@ -36,7 +35,8 @@ def ulozit(notes):
 
 
 def nacist(notes):
-    file_csv = input("zadejte nazev souboru k nacteni (s koncovkou .csv): ")
+    file = input("zadejte nazev souboru k nacteni (s koncovkou .csv): ")
+    file_csv = file + ".csv"
     with open(file_csv, 'r') as file_k_nacteni:
         reader = csv.reader(file_k_nacteni)
         for line in reader:
