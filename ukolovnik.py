@@ -1,4 +1,5 @@
 import csv
+import json
 
 notes = []
 
@@ -66,7 +67,6 @@ def zacit_zapis():
             break
         else:
             print("spatne zadana operace")
-
 
 
 zacit_zapis()

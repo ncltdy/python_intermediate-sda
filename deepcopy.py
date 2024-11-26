@@ -1,5 +1,4 @@
 import copy
-from copy import deepcopy
 
 class Budova:
     def __init__(self):
